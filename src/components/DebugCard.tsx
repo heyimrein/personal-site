@@ -13,7 +13,7 @@ export default function DebugCard() {
   return (
     <motion.div
       className="debug-card"
-      style={{ translateX: scrollProgress * 1800 }}
+      style={{ translateX: (scrollProgress - 0.15) * 3600 }}
       transition={{ duration: 2, type: "spring" }}
     >
       <p>
