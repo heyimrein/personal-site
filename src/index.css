@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background: linear-gradient(45deg, #450536 -50%, #0e0721 25%, #0d0b2e 75%, #0e0721 90%, #450536 125%);
+  background-size: 100vw 100%;
+}

@@ -1,0 +1,23 @@
+#title-links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+}
+
+.title-link {
+  font-size: 1rem;
+  font-family: "Signika", sans-serif;
+  color: ghostwhite;
+  background-image: linear-gradient(45deg, #ff94db 0%, #d49cff 100%);
+  background-clip: text;
+  transition: 0.1s;
+}
+
+.title-link:not(:first-child) {
+  margin-left: 1vw;
+}
+
+.title-link:hover {
+  color: rgb(255 255 255 / 0.5);
+}
