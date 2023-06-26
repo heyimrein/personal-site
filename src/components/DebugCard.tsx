@@ -1,25 +1,19 @@
-import {
-  motion,
-  motionValue,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-} from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import "./DebugCard.css";
+import { useState } from "react";
 
 export default function DebugCard() {
-  let { scrollY } = useScroll();
-  const springScrollY = useSpring(scrollY);
-  let deg = motionValue(0);
+  const { scrollYProgress } = useScroll();
+  const [scrollProgress, setScrollProgress] = useState(scrollYProgress.get());
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    deg = motionValue(latest * 10000);
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    setScrollProgress(latest);
   });
 
   return (
     <motion.div
       className="debug-card"
-      style={{ rotateZ: deg }}
+      style={{ translateX: scrollProgress * 1800 }}
       transition={{ duration: 2, type: "spring" }}
     >
       <p>
