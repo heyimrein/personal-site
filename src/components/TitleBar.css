@@ -3,6 +3,7 @@
   z-index: 100;
   width: 100%;
   overflow: hidden;
+  backdrop-filter: blur(4px);
 }
 
 #title-container {

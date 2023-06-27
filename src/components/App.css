@@ -1,4 +1,6 @@
-#debug-div {
-  position: static;
+#main-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   height: 800vh;
 }

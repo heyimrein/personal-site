@@ -1,0 +1,19 @@
+#intro {
+  display: flex;
+  margin-top: 5em;
+  flex-direction: column;
+}
+
+#head {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: ghostwhite;
+}
+
+#gradient-head {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: transparent;
+  background-image: linear-gradient(45deg, #ff94db 0%, #d49cff 100%);
+  background-clip: text;
+}

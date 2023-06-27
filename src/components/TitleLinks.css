@@ -6,8 +6,8 @@
 }
 
 .title-link {
-  font-size: 1rem;
-  font-family: "Signika", sans-serif;
+  font-size: 0.85rem;
+  font-family: "Poppins", sans-serif;
   color: ghostwhite;
   background-image: linear-gradient(45deg, #ff94db 0%, #d49cff 100%);
   background-clip: text;
@@ -15,9 +15,9 @@
 }
 
 .title-link:not(:first-child) {
-  margin-left: 1vw;
+  margin-left: 1.5vw;
 }
 
 .title-link:hover {
-  color: rgb(255 255 255 / 0.5);
+  color: rgb(255 255 255 / 20%);
 }
