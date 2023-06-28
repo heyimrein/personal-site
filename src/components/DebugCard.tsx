@@ -22,7 +22,7 @@ export default function DebugCard() {
       initial="hidden"
       whileInView="show"
       viewport={{ amount: "some" }}
-      transition={{ duration: 1, type: "spring" }}
+      transition={{ duration: 0.5, type: "spring" }}
     >
       <p>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
