@@ -13,7 +13,7 @@ export default function App() {
           <DescriptionCard>He/him, 20 Years Old</DescriptionCard>
           <DescriptionCard>5+ years of Software Dev Experience</DescriptionCard>
           <DescriptionCard>
-            Constantly Making Beautiful Websites and Efficient Back-Ends
+            Making Beautiful Websites and Efficient Back-Ends
           </DescriptionCard>
           <DescriptionCard>
             Non-Stop Improvement, Always looking for a New Challenge
