@@ -1,0 +1,7 @@
+#scroll-hint {
+  align-self: center;
+  margin-top: 2em;
+  width: 3rem;
+  cursor: grab;
+  user-select: none;
+}

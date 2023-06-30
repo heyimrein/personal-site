@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import "./DebugCard.css";
+import "./DescriptionCard.css";
 
-export default function DebugCard() {
+export default function DescriptionCard(props: { children: string }) {
   const variants = {
     hidden: {
       scale: 0.5,
-      opacity: 0.5,
+      opacity: 0,
       filter: "blur(4px)",
     },
     show: {
@@ -17,17 +17,14 @@ export default function DebugCard() {
 
   return (
     <motion.div
-      className="debug-card"
+      className="desc-card"
       variants={variants}
       initial="hidden"
       whileInView="show"
-      viewport={{ amount: "some" }}
+      viewport={{ amount: "some", margin: "-30% 0% -20% 0%" }}
       transition={{ duration: 0.5, type: "spring" }}
     >
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
-      </p>
+      <p>{props.children}</p>
     </motion.div>
   );
 }

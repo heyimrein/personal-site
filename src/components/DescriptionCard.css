@@ -1,13 +1,17 @@
-.debug-card {
+.desc-card {
   color: ghostwhite;
   font-size: 0.95em;
   font-family: "Roboto", sans-serif;
-  max-width: 15rem;
   padding: 1em;
-  margin: 100rem 0 0 2rem;
+  width: fit-content;
+  max-width: 15rem;
   background:
       linear-gradient(rgb(24 14 38 / 10%) 0%, rgb(24 14 38 / 10%) 100%) padding-box,
       linear-gradient(45deg, #ff94db 0%, #d49cff 100%);
   border: 1px solid transparent;
   border-radius: 1em;
+}
+
+.desc-card:not(:first-child) {
+  margin-top: 10rem;
 }

@@ -1,55 +1,38 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
 import "./IntroHeader.css";
-
-function SlideInText(props: { children: string; id: string; delay: number }) {
-  const slideInText = {
-    hidden: {
-      opacity: 0,
-      x: "-50vw",
-    },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: props.delay,
-        duration: 1.5,
-        ease: [0.33, 1, 0.68, 1],
-      },
-    },
-  };
-
-  return (
-    <motion.span
-      id={props.id}
-      variants={slideInText}
-      initial="hidden"
-      animate="show"
-    >
-      {props.children}
-    </motion.span>
-  );
-}
+import IntroSlideInText from "./IntroSlideInText.tsx";
+import ScrollHint from "./ScrollHint.tsx";
 
 export default function IntroHeader() {
+  const { scrollYProgress } = useScroll();
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    setScrollProgress(v * 1000);
+  });
+
   return (
-    <div id="intro">
+    <motion.div id="intro">
       <motion.span
         id="head"
-        initial={{ opacity: 0, y: "-5em" }}
+        initial={{ opacity: 0, y: "-20vh" }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.75, type: "spring" }}
+        style={{ x: scrollProgress * 10 }}
       >
         I'm a
       </motion.span>
-      <SlideInText id="gradient-head" delay={0.25}>
+      <IntroSlideInText id="gradient-head" delay={0.25} exitMulti={12.5}>
         Fullstack Developer
-      </SlideInText>
-      <SlideInText id="head" delay={0.5}>
+      </IntroSlideInText>
+      <IntroSlideInText id="head" delay={0.5} exitMulti={15}>
         from
-      </SlideInText>
-      <SlideInText id="gradient-head" delay={0.75}>
+      </IntroSlideInText>
+      <IntroSlideInText id="gradient-head" delay={0.75} exitMulti={17.5}>
         Memphis, TN
-      </SlideInText>
-    </div>
+      </IntroSlideInText>
+      <ScrollHint />
+    </motion.div>
   );
 }
