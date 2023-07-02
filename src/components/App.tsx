@@ -12,11 +12,9 @@ export default function App() {
         <div id="card-container">
           <DescriptionCard>He/him, 20 Years Old</DescriptionCard>
           <DescriptionCard>5+ years of Software Dev Experience</DescriptionCard>
+          <DescriptionCard>Managing a community of 10k member</DescriptionCard>
           <DescriptionCard>
-            Making Beautiful Websites and Efficient Back-Ends
-          </DescriptionCard>
-          <DescriptionCard>
-            Non-Stop Improvement, Always looking for a New Challenge
+            3 years of on/off freelance frontend development
           </DescriptionCard>
         </div>
       </div>
