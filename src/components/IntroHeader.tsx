@@ -38,7 +38,7 @@ export default function IntroHeader() {
         I'm a
       </motion.span>
       <IntroSlideInText id="gradient-head" delay={0.25} scrollOffset={0}>
-        Fullstack Developer
+        Frontend Developer
       </IntroSlideInText>
       <IntroSlideInText id="head" delay={0.5} scrollOffset={0}>
         from
