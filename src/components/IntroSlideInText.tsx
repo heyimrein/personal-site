@@ -1,17 +1,30 @@
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useState } from "react";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+} from "framer-motion";
+import { useRef, useState } from "react";
 
 export default function IntroSlideInText(props: {
   children: string;
   id: string;
   delay: number;
-  exitMulti: number;
+  scrollOffset: number;
 }) {
-  const { scrollYProgress } = useScroll();
+  const target = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target,
+    offset: [`${props.scrollOffset} 0.3`, "0.2 0.1"],
+  });
+  const scrollYProgressSpring = useSpring(scrollYProgress, {
+    stiffness: 1000,
+    damping: 100,
+  });
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  useMotionValueEvent(scrollYProgress, "change", (v) => {
-    setScrollProgress(v * 1000);
+  useMotionValueEvent(scrollYProgressSpring, "change", (v) => {
+    setScrollProgress(v);
   });
 
   const slideInText = {
@@ -33,11 +46,12 @@ export default function IntroSlideInText(props: {
   return (
     <motion.span
       id={props.id}
+      ref={target}
       variants={slideInText}
       initial="hidden"
       animate="show"
       style={{
-        x: scrollProgress * props.exitMulti,
+        x: `${scrollProgress * 100}vw`,
       }}
     >
       {props.children}
