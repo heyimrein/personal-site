@@ -13,7 +13,7 @@ export default function IntroHeader() {
   const target = useRef(null);
   const { scrollYProgress } = useScroll({
     target,
-    offset: ["0 0.3", "0.2 0.1"],
+    offset: ["0 0.2", "0.2 0.1"],
   });
   const scrollYProgressSpring = useSpring(scrollYProgress, {
     stiffness: 1000,
@@ -37,13 +37,13 @@ export default function IntroHeader() {
       >
         I'm a
       </motion.span>
-      <IntroSlideInText id="gradient-head" delay={0.25} scrollOffset={0.1}>
+      <IntroSlideInText id="gradient-head" delay={0.25} scrollOffset={0}>
         Fullstack Developer
       </IntroSlideInText>
-      <IntroSlideInText id="head" delay={0.5} scrollOffset={0.2}>
+      <IntroSlideInText id="head" delay={0.5} scrollOffset={0}>
         from
       </IntroSlideInText>
-      <IntroSlideInText id="gradient-head" delay={0.75} scrollOffset={0.3}>
+      <IntroSlideInText id="gradient-head" delay={0.75} scrollOffset={0}>
         Memphis, TN
       </IntroSlideInText>
       <ScrollHint />

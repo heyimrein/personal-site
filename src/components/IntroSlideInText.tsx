@@ -15,7 +15,7 @@ export default function IntroSlideInText(props: {
   const target = useRef(null);
   const { scrollYProgress } = useScroll({
     target,
-    offset: [`${props.scrollOffset} 0.3`, "0.2 0.1"],
+    offset: [`${props.scrollOffset} 0.2`, "0.2 0.1"],
   });
   const scrollYProgressSpring = useSpring(scrollYProgress, {
     stiffness: 1000,
