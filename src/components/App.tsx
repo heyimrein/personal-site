@@ -10,13 +10,16 @@ export default function App() {
       <div id="main-container" className="pt-12">
         <IntroHeader />
         <div id="card-container">
-          <DescriptionCard>He/him, 20 Years Old</DescriptionCard>
+          <DescriptionCard>
+            He/him, 20 Years Old; Currently freelancing
+          </DescriptionCard>
           <DescriptionCard>5+ years of Software Dev Experience</DescriptionCard>
           <DescriptionCard>
-            Moderates a community of ≈10k members
+            Moderating a community of ≈10k members
           </DescriptionCard>
           <DescriptionCard>
-            3 years of on/off freelance frontend development
+            Currently working on a Live-Streaming tool suite written in
+            Typescript + React
           </DescriptionCard>
         </div>
       </div>
