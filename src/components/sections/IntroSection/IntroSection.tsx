@@ -5,11 +5,11 @@ import {
   useSpring,
 } from "framer-motion";
 import { useRef, useState } from "react";
-import "./IntroHeader.css";
-import IntroSlideInText from "./IntroSlideInText.tsx";
-import ScrollHint from "./ScrollHint.tsx";
+import "./IntroSection.css";
+import IntroSlideInText from "../../IntroSlideInText/IntroSlideInText.tsx";
+import ScrollHint from "../../ScrollHint/ScrollHint.tsx";
 
-export default function IntroHeader() {
+export default function IntroSection() {
   const target = useRef(null);
   const { scrollYProgress } = useScroll({
     target,

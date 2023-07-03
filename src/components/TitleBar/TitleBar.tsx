@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "./TitleBar.css";
-import logo from "../assets/rein_logo_clip.svg";
-import TitleLinks from "./TitleLinks.tsx";
+import logo from "../../assets/rein_logo_clip.svg";
+import TitleLinks from "../TitleLinks/TitleLinks.tsx";
 
 export default function TitleBar() {
   // const { scrollYProgress } = useScroll();

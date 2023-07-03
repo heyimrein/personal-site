@@ -4,7 +4,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import DescriptionCard from "./DescriptionCard.tsx";
+import DescriptionCard from "../../DescriptionCard/DescriptionCard.tsx";
 import "./CardSection.css";
 import { useRef, useState } from "react";
 
