@@ -10,7 +10,7 @@ import { useRef, useState } from "react";
 
 export default function CardSection() {
   const target = useRef(null);
-  const [initialOpacity, setInitialOpacity] = useState(0.75);
+  const [initialOpacity, setInitialOpacity] = useState(0);
   const [finalOpacity, setFinalOpacity] = useState(0);
 
   const { scrollYProgress } = useScroll({

@@ -1,7 +1,7 @@
 #intro {
   display: flex;
   padding-top: 25vh;
-  margin-bottom: 30rem;
+  margin-bottom: 10rem;
   flex-direction: column;
   font-size: min(4vw, 1.5rem);
   width: 100vw;
