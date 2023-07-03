@@ -1,0 +1,55 @@
+:root {
+  --card-container-height: 80vh;
+  --card-width: min(15em, 50vw);
+  --card-y-margin: 10em;
+  --card-side-offset: min(40vw, 10em);
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200vh;
+  margin: 0 1em 0 1em;
+}
+
+.card-backdrop {
+  position: sticky;
+  top: 10vh;
+  bottom: 20vh;
+  width: calc(var(--card-width) + var(--card-side-offset));
+  height: var(--card-container-height);
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #262247;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.1);
+  border-radius: 1rem;
+}
+
+.card-container {
+  height: fit-content;
+  padding-bottom: 20em;
+}
+
+.desc-card:nth-child(1) {
+  margin-top: -20vh;
+  margin-left: 1em;
+  margin-right: var(--card-side-offset);
+}
+
+.desc-card:nth-child(2) {
+  margin-left: var(--card-side-offset);
+  margin-right: 1em;
+}
+
+.desc-card:nth-child(3) {
+  margin-left: 1em;
+  margin-right: var(--card-side-offset);
+}
+
+.desc-card:nth-child(4) {
+  margin-left: var(--card-side-offset);
+  margin-right: 1em;
+}

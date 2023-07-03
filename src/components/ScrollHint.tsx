@@ -37,9 +37,9 @@ export default function ScrollHint() {
         initial="hidden"
         whileInView="showing"
         viewport={{ margin: "-40% 0% 0% 0%" }}
-        dragTransition={{ bounceDamping: 15, bounceStiffness: 2000 }}
-        dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
-        drag
+        // dragTransition={{ bounceDamping: 15, bounceStiffness: 2000 }}
+        // dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
+        // drag
       />
     </>
   );

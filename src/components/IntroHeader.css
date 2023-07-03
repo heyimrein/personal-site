@@ -4,6 +4,8 @@
   margin-bottom: 30rem;
   flex-direction: column;
   font-size: min(4vw, 1.5rem);
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 #head {

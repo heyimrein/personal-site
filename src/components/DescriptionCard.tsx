@@ -21,7 +21,7 @@ export default function DescriptionCard(props: { children: string }) {
       variants={variants}
       initial="hidden"
       whileInView="show"
-      viewport={{ amount: "some", margin: "-30% 0% -20% 0%" }}
+      viewport={{ amount: "some", margin: "-20% 0% -20% 0%" }}
       transition={{ duration: 0.5, type: "spring" }}
     >
       <p>{props.children}</p>
