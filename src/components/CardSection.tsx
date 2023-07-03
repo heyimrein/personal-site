@@ -49,9 +49,7 @@ export default function CardSection() {
           className="card-container"
           style={{ y: cardScrollProgress }}
         >
-          <DescriptionCard>
-            He/him, 20 Years Old; Currently freelancing
-          </DescriptionCard>
+          <DescriptionCard>He/him, 20 Years Old; Freelancer</DescriptionCard>
           <DescriptionCard>5+ years of Software Dev Experience</DescriptionCard>
           <DescriptionCard>
             Moderating a community of ≈10k members
