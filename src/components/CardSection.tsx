@@ -61,6 +61,10 @@ export default function CardSection() {
             Typescript + React
           </DescriptionCard>
         </motion.div>
+        <div className="input-panel">
+          <div className="input-field" />
+          <div className="input-submit" />
+        </div>
       </div>
     </motion.div>
   );
