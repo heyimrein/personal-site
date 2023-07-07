@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --gradient-color-left: #ffa4d1;
+  --gradient-color-left-rgb: 255, 164, 209;
+  --gradient-color-right: #827aff;
+  --gradient-color-right-rgb: 130, 122, 255;
+  --gradient: linear-gradient(45deg, #ffa4d1 0%, #827aff 100%);
+}
+
 html {
   background: linear-gradient(45deg, #450536 -50%, #0e0721 25%, #0d0b2e 75%, #0e0721 90%, #450536 125%);
   background-size: 100%;

@@ -6,8 +6,8 @@ import {
 } from "framer-motion";
 import { useRef, useState } from "react";
 import "./IntroSection.css";
-import IntroSlideInText from "../../IntroSlideInText/IntroSlideInText.tsx";
-import ScrollHint from "../../ScrollHint/ScrollHint.tsx";
+import logoTop from "../../../assets/rein_logo_top.svg";
+import logoBottom from "../../../assets/rein_logo_bottom.svg";
 
 export default function IntroSection() {
   const target = useRef(null);
@@ -26,27 +26,22 @@ export default function IntroSection() {
   });
 
   return (
-    <motion.div id="intro">
-      <motion.span
-        ref={target}
-        id="head"
-        initial={{ opacity: 0, y: "-20vh" }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.75, type: "spring" }}
-        style={{ x: `${scrollProgress * 80}vw` }}
-      >
-        I'm a
-      </motion.span>
-      <IntroSlideInText id="gradient-head" delay={0.25} scrollOffset={0}>
-        Frontend Developer
-      </IntroSlideInText>
-      <IntroSlideInText id="head" delay={0.5} scrollOffset={0}>
-        from
-      </IntroSlideInText>
-      <IntroSlideInText id="gradient-head" delay={0.75} scrollOffset={0}>
-        Memphis, TN
-      </IntroSlideInText>
-      <ScrollHint />
+    <motion.div className="intro">
+      <motion.div className="wrapper">
+        <motion.div className="logo">
+          <img className="logo-top" src={logoTop} alt="logo" />
+          <img className="logo-bottom" src={logoBottom} alt="logo" />
+        </motion.div>
+        <motion.div className="text">
+          <span className="name">rein</span>
+          <span className="name-hint">/ɹeɪn/</span>
+          <p>
+            <span>Frontend Dev </span>
+            from
+            <span> Memphis, TN</span>
+          </p>
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 }

@@ -11,6 +11,7 @@ export default function DescriptionCard(props: { children: string }) {
     show: {
       scale: 1,
       opacity: 1,
+      boxShadow: "0 0 3em rgba(var(--gradient-color-left-rgb), 0.2)",
       filter: "blur(0px)",
     },
   };

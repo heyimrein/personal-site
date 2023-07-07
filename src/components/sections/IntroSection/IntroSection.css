@@ -1,24 +1,71 @@
-#intro {
+.intro {
+  --logo-size: 10em;
+
   display: flex;
-  padding-top: 25vh;
-  margin-bottom: 10rem;
   flex-direction: column;
-  font-size: min(4vw, 1.5rem);
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  align-items: center;
+  width: 100%;
+  padding-top: 25vh;
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+  font-size: min(2vw, 1.5rem);
+  overflow: hidden;
 }
 
-#head {
-  font-size: 1.5em;
+.intro > .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo > .logo-top {
+  height: var(--logo-size);
+  width: auto;
+}
+
+.logo > .logo-bottom {
+  height: var(--logo-size);
+  width: auto;
+  margin-top: calc(var(--logo-size) * -1)
+}
+
+.intro > .wrapper > .text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.intro > .wrapper > .text > .name-hint {
+  margin-top: -1.5em;
+  margin-bottom: 1em;
+  font-size: 0.75em;
   font-family: "Poppins", sans-serif;
   color: ghostwhite;
 }
 
-#gradient-head {
-  font-size: 2em;
+.intro > .wrapper > .text > .name {
+  font-size: 3em;
+  font-family: "Playfair", sans-serif;
+  color: ghostwhite;
+}
+
+.intro > .wrapper > .text > p {
+  font-size: 1em;
   font-family: "Poppins", sans-serif;
-  color: transparent;
-  background-image: linear-gradient(45deg, #ff94db 0%, #d49cff 100%);
+  color: ghostwhite;
+}
+
+.intro > .wrapper > .text > p > span {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0);
+  background-image: linear-gradient(
+    45deg,
+    var(--gradient-color-left) 0%,
+    var(--gradient-color-right) 200%
+  );
   background-clip: text;
 }

@@ -7,8 +7,8 @@
   max-width: var(--card-width);
   background:
       linear-gradient(rgb(24 14 38 / 10%) 0%, rgb(24 14 38 / 10%) 100%) padding-box,
-      linear-gradient(45deg, #ff94db 0%, #d49cff 100%);
-  box-shadow: 0 0.25em 0.5em rgb(0 0 0 / 0.25);
+      linear-gradient(25deg, var(--gradient-color-left) 0%, var(--gradient-color-right) 200%);
+  /*box-shadow: 0 0.25em 0.5em rgb(0 0 0 / 0.25);*/
   border-radius: var(--card-radius);
 }
 
