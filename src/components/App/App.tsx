@@ -5,7 +5,7 @@ import CardSection from "../sections/CardSection/CardSection.tsx";
 export default function App() {
   return (
     <>
-      <div id="main-container" className="pt-12">
+      <div id="main-container">
         <IntroSection />
         <CardSection />
       </div>

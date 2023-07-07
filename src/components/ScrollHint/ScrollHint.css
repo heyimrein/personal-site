@@ -1,8 +1,6 @@
-:root {
+.scroll-hint {
   --scroll-hint-bounce: 0.25rem;
-}
 
-#scroll-hint {
   align-self: center;
   margin-top: 2em;
   width: 2.5rem;

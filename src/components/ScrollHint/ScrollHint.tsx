@@ -1,14 +1,21 @@
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import "./ScrollHint.css";
 import icon from "../../assets/scroll_hint.svg";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function ScrollHint() {
   const [firstShow, setFirstShow] = useState(true);
   const { scrollY } = useScroll();
+  const ref = useRef(null);
+  const view = useInView(ref, { margin: "-40% 0% 0% 0%" });
 
   useMotionValueEvent(scrollY, "change", () => {
-    setFirstShow(false);
+    // setFirstShow(false);
   });
 
   const variants = {
@@ -21,7 +28,7 @@ export default function ScrollHint() {
       opacity: 1,
       transition: {
         duration: 0.25,
-        delay: firstShow ? 3 : 0,
+        delay: 0,
         type: "spring",
       },
     },
@@ -32,11 +39,11 @@ export default function ScrollHint() {
       <motion.img
         src={icon}
         alt="scroll hint"
-        id="scroll-hint"
+        ref={ref}
+        className="scroll-hint"
         variants={variants}
         initial="hidden"
-        whileInView="showing"
-        viewport={{ margin: "-40% 0% 0% 0%" }}
+        animate={view ? "showing" : "hidden"}
         // dragTransition={{ bounceDamping: 15, bounceStiffness: 2000 }}
         // dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
         // drag
