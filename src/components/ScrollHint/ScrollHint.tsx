@@ -9,14 +9,8 @@ import icon from "../../assets/scroll_hint.svg";
 import { useRef, useState } from "react";
 
 export default function ScrollHint() {
-  const [firstShow, setFirstShow] = useState(true);
-  const { scrollY } = useScroll();
   const ref = useRef(null);
   const view = useInView(ref, { margin: "-40% 0% 0% 0%" });
-
-  useMotionValueEvent(scrollY, "change", () => {
-    // setFirstShow(false);
-  });
 
   const variants = {
     hidden: {
