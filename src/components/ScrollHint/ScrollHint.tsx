@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 export default function ScrollHint() {
   const ref = useRef(null);
-  const view = useInView(ref, { margin: "-40% 0% 0% 0%" });
+  const view = useInView(ref, { margin: "-40% 0% 0% 0%", once: true });
 
   const variants = {
     hidden: {

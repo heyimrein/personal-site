@@ -8,7 +8,6 @@ import { useRef, useState } from "react";
 import "./IntroSection.css";
 import logoTop from "../../../assets/rein_logo_top.svg";
 import logoBottom from "../../../assets/rein_logo_bottom.svg";
-import ScrollHint from "../../ScrollHint/ScrollHint.tsx";
 
 export default function IntroSection() {
   const target = useRef(null);
@@ -74,7 +73,7 @@ export default function IntroSection() {
           </motion.span>
           <motion.span
             className="name-hint"
-            initial={{ scale: 0.5, opacity: 0, y: "1em" }}
+            initial={{ scale: 0.5, opacity: 0, y: "2em" }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 1 }}
           >
@@ -91,7 +90,6 @@ export default function IntroSection() {
           </motion.p>
         </div>
       </div>
-      <ScrollHint />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import "./DescriptionCard.css";
+import "./ChatMessage.css";
 
-export default function DescriptionCard(props: { children: string }) {
+export default function ChatMessage(props: { children: string }) {
   const variants = {
     hidden: {
       scale: 0.5,
@@ -18,7 +18,7 @@ export default function DescriptionCard(props: { children: string }) {
 
   return (
     <motion.div
-      className="desc-card"
+      className="message"
       variants={variants}
       initial="hidden"
       whileInView="show"
