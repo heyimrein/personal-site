@@ -33,7 +33,7 @@
   height: var(--logo-size);
   width: auto;
   margin-top: calc(var(--logo-size) * -1);
-  filter: drop-shadow(0 0 1em rgba(var(--gradient-color-right-rgb), 0.25));
+  filter: drop-shadow(0 0 1em rgba(var(--gradient-color-left-rgb), 0.25));
 }
 
 .intro > .wrapper > .text {
