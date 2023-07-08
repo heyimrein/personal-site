@@ -14,7 +14,7 @@ export default function IntroSection() {
   const target = useRef(null);
   const { scrollYProgress } = useScroll({
     target,
-    offset: ["0 0.2", "0.2 0.1"],
+    offset: ["start", "0.2 1"],
   });
   const scrollYProgressSpring = useSpring(scrollYProgress, {
     stiffness: 1000,
@@ -34,25 +34,32 @@ export default function IntroSection() {
             className="logo-top"
             src={logoTop}
             alt="logo"
-            initial={{ scale: 0, opacity: 0, rotateZ: "45deg", y: "-100vh" }}
-            animate={{ scale: 1, opacity: 1, rotateZ: 0, y: 0 }}
+            initial={{ scale: 0, opacity: 0, rotateZ: "45deg", y: "-50vh" }}
+            animate={{
+              scale: 1,
+              opacity: 1,
+              rotateZ: `${scrollProgress * 90}deg`,
+              x: `${scrollProgress * 75}vw`,
+              y: 0,
+            }}
             transition={{
-              delay: 0.5,
-              duration: 2.5,
-              type: "spring",
-              bounce: 0,
+              delay: 0,
+              duration: 2,
             }}
           />
           <motion.img
             className="logo-bottom"
             src={logoBottom}
             alt="logo"
-            initial={{ scale: 0, opacity: 0, rotateZ: "-45deg", y: "100vh" }}
-            animate={{ scale: 1, opacity: 1, rotateZ: 0, y: 0 }}
+            initial={{ scale: 0, opacity: 0, rotateZ: "-45deg", y: "50vh" }}
+            animate={{
+              scale: 1,
+              opacity: 1,
+              rotateZ: `${scrollProgress * 45}deg`,
+              y: `${scrollProgress * -20}vh`,
+            }}
             transition={{
-              duration: 2.5,
-              type: "spring",
-              bounce: 0,
+              duration: 2,
             }}
           />
         </div>
@@ -61,7 +68,7 @@ export default function IntroSection() {
             className="name"
             initial={{ scale: 0.9, opacity: 0, y: "1em" }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1.5, type: "spring" }}
+            transition={{ delay: 1, duration: 1.5 }}
           >
             rein
           </motion.span>
@@ -69,14 +76,14 @@ export default function IntroSection() {
             className="name-hint"
             initial={{ scale: 0.5, opacity: 0, y: "1em" }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 1, type: "spring" }}
+            transition={{ delay: 1.5, duration: 1 }}
           >
             /ɹeɪn/
           </motion.span>
           <motion.p
             initial={{ scale: 0.9, opacity: 0, y: "1em" }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
-            transition={{ delay: 2, duration: 1, type: "spring" }}
+            transition={{ delay: 2, duration: 1 }}
           >
             <span>Frontend Dev </span>
             from

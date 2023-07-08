@@ -24,7 +24,7 @@ export default function CardSection() {
 
   const initialTransitionMotion = useTransform(
     scrollYProgress,
-    [0, 0.2],
+    [0, 0.1],
     [0, 1]
   );
   const finalTransitionMotion = useTransform(scrollYProgress, [0.8, 1], [0, 1]);

@@ -20,17 +20,20 @@
   display: flex;
   flex-direction: column;
   margin-left: -2em;
+  z-index: -1;
 }
 
 .logo > .logo-top {
   height: var(--logo-size);
   width: auto;
+  filter: drop-shadow(0 0 1em rgba(var(--gradient-color-right-rgb), 0.25));
 }
 
 .logo > .logo-bottom {
   height: var(--logo-size);
   width: auto;
-  margin-top: calc(var(--logo-size) * -1)
+  margin-top: calc(var(--logo-size) * -1);
+  filter: drop-shadow(0 0 1em rgba(var(--gradient-color-right-rgb), 0.25));
 }
 
 .intro > .wrapper > .text {
@@ -42,7 +45,9 @@
 .intro > .wrapper > .text > .name {
   font-size: 3em;
   font-family: "Playfair", sans-serif;
-  color: ghostwhite;
+  background-image: linear-gradient(45deg, var(--gradient-color-left) 0%, var(--gradient-color-right) 100%);
+  background-clip: text;
+  color: transparent;
 }
 
 .intro > .wrapper > .text > .name-hint {
