@@ -1,12 +1,7 @@
-import {
-  motion,
-  useInView,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import "./ScrollHint.css";
 import icon from "../../assets/scroll_hint.svg";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 export default function ScrollHint() {
   const ref = useRef(null);
