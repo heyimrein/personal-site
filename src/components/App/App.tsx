@@ -7,7 +7,6 @@ export default function App() {
   return (
     <>
       <div id="main-container">
-        <CardSection />
         <IntroSection />
         <ChatSection />
       </div>
