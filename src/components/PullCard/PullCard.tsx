@@ -7,17 +7,21 @@ export default function PullCard(props: { children: string }) {
 
   return (
     <>
-      <motion.div
-        className="card-wrapper"
-        onClick={() => setOpen(!open)}
-        // whileTap={{ scale: 0.95 }}
-        whileHover={{}}
-      >
-        <motion.div className="card" animate={{ y: `${open ? -50 : -10}%` }}>
+      <div className="card-wrapper">
+        <motion.div
+          onClick={() => setOpen(!open)}
+          whileTap={{ scale: 0.95 }}
+          whileHover={{}}
+        />
+        <motion.div
+          className="card"
+          animate={{ y: `${open ? -50 : -10}%` }}
+          drag
+        >
           <span>test</span>
           {props.children}
         </motion.div>
-      </motion.div>
+      </div>
     </>
   );
 }
