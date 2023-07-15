@@ -1,0 +1,48 @@
+.scroll-card {
+  --card-gradient-left-color: 36, 30, 99;
+  --card-gradient-right-color: 64, 30, 105;
+
+  display: flex;
+  flex-direction: row;
+  height: 12em;
+  width: 40em;
+  margin-top: 1em;
+}
+
+.scroll-card:not(:first-child) {
+  margin-top: 1em;
+}
+
+.scroll-card > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 50%;
+}
+
+.scroll-card > div:not(:first-child) {
+  margin-left: 0.5em;
+}
+
+.scroll-card > div > span {
+  margin: auto;
+  color: ghostwhite;
+}
+
+.scroll-card-left {
+  border-radius: 1em 0 0 1em;
+  background-image: linear-gradient(
+      45deg,
+      rgba(var(--card-gradient-right-color), 0.75),
+      rgba(var(--card-gradient-left-color), 0.75)
+  );
+}
+
+.scroll-card-right {
+  border-radius: 0 1em 1em 0;
+  background-image: linear-gradient(
+      45deg,
+      rgba(var(--card-gradient-left-color), 0.75),
+      rgba(var(--card-gradient-right-color), 0.75)
+  );
+}
