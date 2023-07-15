@@ -43,7 +43,7 @@ export default function IntroSection() {
             }}
             transition={{
               delay: 0,
-              duration: 2,
+              duration: 1,
             }}
           />
           <motion.img
@@ -58,7 +58,7 @@ export default function IntroSection() {
               y: `${scrollProgress * -20}vh`,
             }}
             transition={{
-              duration: 2,
+              duration: 1,
             }}
           />
         </div>
