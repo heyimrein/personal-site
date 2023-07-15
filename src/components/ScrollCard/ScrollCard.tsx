@@ -1,4 +1,4 @@
-import { motion, Reorder } from "framer-motion";
+import { motion } from "framer-motion";
 import "./ScrollCard.css";
 
 export default function ScrollCard(props: {
