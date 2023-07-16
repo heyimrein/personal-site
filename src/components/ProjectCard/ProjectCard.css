@@ -1,0 +1,33 @@
+.project-card {
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-image: linear-gradient(
+    22.5deg,
+    var(--gradient-color-left) 0%,
+    var(--gradient-color-right) 100%
+  );
+  border-radius: 1em;
+}
+
+.project-card:not(:first-child) {
+  margin-top: 0.5em;
+}
+
+.project-card > img {
+  width: 2em;
+}
+
+.project-card > span {
+  margin-left: 0.5em;
+  font-family: "Poppins", sans-serif;
+  color: ghostwhite;
+}
+
+.project-card > .drag-indicator {
+  margin: 0 -0.5em 0 1em;
+  cursor: grab;
+}
