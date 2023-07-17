@@ -42,7 +42,7 @@
 }
 
 .project-card > .project-link:hover {
-  box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.1);
   translate: 0 -0.1em;
 }
 

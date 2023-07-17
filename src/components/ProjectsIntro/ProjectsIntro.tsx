@@ -2,6 +2,8 @@ import { motion, useMotionValue } from "framer-motion";
 import React from "react";
 
 export default function ProjectsIntro() {
+  const degrees = 22.5;
+
   const rect = document
     .getElementById("projects-intro")
     ?.getBoundingClientRect();
@@ -11,8 +13,10 @@ export default function ProjectsIntro() {
   function handleMouse(event: React.MouseEvent) {
     const rect = event.currentTarget.getBoundingClientRect();
 
-    x.set(((event.clientX - rect.left) / rect.width) * 90 - 45);
-    y.set(-(((event.clientY - rect.top) / rect.height) * 90 - 45));
+    x.set(((event.clientX - rect.left) / rect.width) * (degrees * 2) - degrees);
+    y.set(
+      -(((event.clientY - rect.top) / rect.height) * (degrees * 2) - degrees)
+    );
   }
 
   return (

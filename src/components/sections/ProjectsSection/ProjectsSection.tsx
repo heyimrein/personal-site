@@ -29,7 +29,7 @@ export default function ProjectsSection() {
           iconAlt="rust logo"
         />
       </div>
-      <ProjectsIntro />
+      {/*<ProjectsIntro />*/}
     </div>
   );
 }
