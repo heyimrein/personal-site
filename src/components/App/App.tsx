@@ -7,9 +7,9 @@ export default function App() {
   return (
     <>
       <div id="main-container">
-        <ProjectsSection />
         <IntroSection />
         <ChatSection />
+        <ProjectsSection />
       </div>
     </>
   );

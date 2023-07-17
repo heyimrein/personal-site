@@ -10,10 +10,29 @@ interface Props {
 }
 
 export default function ProjectCard({ text, href, iconSrc, iconAlt }: Props) {
+  const variants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.75,
+    },
+    showing: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 2,
+        type: "spring",
+        stiffness: 200,
+      },
+    },
+  };
+
   return (
     <motion.div
       className="project-card"
       id={text}
+      variants={variants}
+      initial="hidden"
+      whileInView="showing"
       dragSnapToOrigin={true}
       dragTransition={{ bounceStiffness: 200, bounceDamping: 20 }}
       drag

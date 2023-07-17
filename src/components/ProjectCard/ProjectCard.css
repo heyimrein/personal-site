@@ -42,11 +42,21 @@
 }
 
 .project-card > .project-link:hover {
-  box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.2);
   translate: 0 -0.1em;
 }
 
 .project-card > .project-link:active {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
   translate: 0 0;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .project-card {
+    pointer-events: none;
+  }
+
+  .project-card > .project-link {
+    pointer-events: all;
+  }
 }
