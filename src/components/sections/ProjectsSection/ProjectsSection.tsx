@@ -8,12 +8,24 @@ export default function ProjectsSection() {
       <div className="projects-group">
         <ProjectCard
           text="Rust Example Projects for Beginners"
+          href="https://github.com/heyimrein/rs-examples"
+          iconSrc={RustLogo}
+          iconAlt="rust logo"
+        />
+        <ProjectCard
+          text="Games made for Game Jams"
+          href="https://heyimrein.itch.io"
+          iconSrc={RustLogo}
+          iconAlt="rust logo"
+        />
+        <ProjectCard
+          text="Text-bubble generator for content-creators"
           href="https://github.com/heyimrein"
           iconSrc={RustLogo}
           iconAlt="rust logo"
         />
       </div>
-      <div>
+      <div className="projects-intro">
         <span>Projects</span>
       </div>
     </div>
