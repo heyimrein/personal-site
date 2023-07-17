@@ -1,8 +1,8 @@
 .projects-section {
-  font-size: min(1.85vw, 1rem);
+  font-size: min(1.8vw, 1.5rem);
   display: flex;
   flex-direction: row;
-  margin: 5em 1em;
+  margin: 20rem 1rem;
 }
 
 .projects-group {
@@ -11,7 +11,8 @@
 }
 
 .projects-intro-wrapper {
-  perspective: 800px;
+  perspective: 600px;
+  cursor: crosshair;
 }
 
 .projects-intro-wrapper:first-child {

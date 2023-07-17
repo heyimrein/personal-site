@@ -51,6 +51,12 @@
   translate: 0 0;
 }
 
+@media (min-aspect-ratio: 1/1) {
+  .project-card {
+    cursor: grab;
+  }
+}
+
 @media (max-aspect-ratio: 1/1) {
   .project-card {
     pointer-events: none;
