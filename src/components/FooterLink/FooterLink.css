@@ -1,0 +1,14 @@
+.footer-link {
+  font-family: "Fira Sans", sans-serif;
+  color: var(--gradient-color-left);
+  text-decoration: underline;
+  transition: 0.25s ease-in-out;
+}
+
+.footer-link:not(:first-child) {
+  margin-left: 1em;
+}
+
+.footer-link:hover {
+  transform: translateY(-0.25em);
+}
