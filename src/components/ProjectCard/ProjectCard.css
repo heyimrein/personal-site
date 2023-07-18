@@ -21,7 +21,7 @@
 
 .project-card > span {
   padding: 0 0.5em;
-  margin: 0 auto;
+  margin: 0 1em 0 auto;
   font-family: "Poppins", sans-serif;
   color: ghostwhite;
 }

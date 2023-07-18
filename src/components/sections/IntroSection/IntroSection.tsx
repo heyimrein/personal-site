@@ -16,8 +16,7 @@ export default function IntroSection() {
     offset: ["start", "0.2 1"],
   });
   const scrollYProgressSpring = useSpring(scrollYProgress, {
-    stiffness: 1000,
-    damping: 100,
+    stiffness: 5000,
   });
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -42,8 +41,7 @@ export default function IntroSection() {
               y: 0,
             }}
             transition={{
-              delay: 0,
-              duration: 1,
+              duration: 2,
             }}
           />
           <motion.img
@@ -58,7 +56,7 @@ export default function IntroSection() {
               y: `${scrollProgress * -20}vh`,
             }}
             transition={{
-              duration: 1,
+              duration: 2,
             }}
           />
         </div>

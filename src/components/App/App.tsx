@@ -2,6 +2,7 @@ import "./App.css";
 import IntroSection from "../sections/IntroSection/IntroSection.tsx";
 import ChatSection from "../sections/ChatSection/ChatSection.tsx";
 import ProjectsSection from "../sections/ProjectsSection/ProjectsSection.tsx";
+import ContactSection from "../sections/ContactSection/ContactSection.tsx";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <IntroSection />
         <ChatSection />
         <ProjectsSection />
+        <ContactSection />
       </div>
     </>
   );
