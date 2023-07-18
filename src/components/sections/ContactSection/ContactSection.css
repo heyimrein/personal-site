@@ -55,6 +55,7 @@
 
 .contact-input.extra-notes {
   height: 7em;
+  resize: none;
 }
 
 #contact-submit {
