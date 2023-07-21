@@ -1,0 +1,39 @@
+#about-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(80vw, 30em);
+  padding: 1.5em 1em;
+  margin: 1em 0 0 0;
+  font-family: "Poppins", sans-serif;
+  color: ghostwhite;
+  background-color: rgba(200, 200, 255, 0.1);
+  border-radius: 1em;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.25);
+}
+
+.about-me-header {
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
+}
+
+.about-me-content {
+
+}
+
+.about-me-header, .about-me-content {
+  transition: 0.25s ease-in-out;
+}
+
+.about-me-header:hover, .about-me-content:hover {
+  transform: translateY(-0.25em);
+  text-shadow: 0 0.25em 0.5em black;
+}
+
+.about-me-divider {
+  align-self: center;
+  width: 90%;
+  height: 0.1em;
+  margin: 1.5em;
+  background-image: var(--gradient);
+}
