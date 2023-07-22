@@ -4,6 +4,7 @@ import ChatSection from "../sections/ChatSection/ChatSection.tsx";
 import ProjectsSection from "../sections/ProjectsSection/ProjectsSection.tsx";
 import ContactSection from "../sections/ContactSection/ContactSection.tsx";
 import FooterSection from "../sections/FooterSection/FooterSection.tsx";
+import AboutMeSection from "../sections/AboutMeSection/AboutMeSection.tsx";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <div id="main-container">
         <IntroSection />
         <ChatSection />
+        <AboutMeSection />
         <ProjectsSection />
         <ContactSection />
         <FooterSection />

@@ -72,8 +72,7 @@ export default function ChatSection() {
           <ChatMessage>5+ years of Software Dev Experience</ChatMessage>
           <ChatMessage>Moderating a community of ≈10k members</ChatMessage>
           <ChatMessage>
-            Currently working on a Live-Streaming tool suite written in
-            Typescript + React
+            Currently designing portfolio sites for artists 🫧
           </ChatMessage>
         </motion.div>
         <div className="input-panel">
